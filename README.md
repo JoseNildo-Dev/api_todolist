@@ -11,7 +11,8 @@ Simplify.
 O projeto foi elaborado [nesse vídeo](https://youtu.be/IjProDV001o).
 
 ## Tecnologias
- 
+
+- [Docker](https://www.docker.com/)
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Spring 
 MVC](https://docs.spring.io/spring-framework/reference/web/webmvc.html)
