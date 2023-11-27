@@ -2,14 +2,6 @@
   TODO List
 </h1>
 
-<p align="center">
- <img 
-src="https://img.shields.io/static/v1?label=Youtube&message=@giulianabezerra&color=8257E5&labelColor=000000" 
-alt="@giulianabezerra" />
- <img 
-src="https://img.shields.io/static/v1?label=Tipo&message=Desafio&color=8257E5&labelColor=000000" 
-alt="Desafio" />
-</p>
 
 API para gerenciar tarefas (CRUD) que faz parte [desse 
 desafio](https://github.com/simplify-liferay/desafio-junior-backend-simplify) 
@@ -43,14 +35,16 @@ MVC](https://docs.spring.io/spring-framework/reference/web/webmvc.html)
 ```
 $ ./mvnw clean package
 ```
-- Executar a aplicação:
+- Executar a aplicação (Docker):
 ```
-$ java -jar target/todolist-0.0.1-SNAPSHOT.jar
+$ docker-compose up --build
 ```
 
 A API poderá ser acessada em [localhost:8080](http://localhost:8080).
 O Swagger poderá ser visualizado em 
 [localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+
+**Nota Importante:** Devido à lenta inicialização do MySQL, o container pode demorar a inicializar. Na minha máquina, levou cerca de 4 minutos e 30 segundos do docker-compose up --build até o Spring estar pronto. Mensagens de erro relacionadas a JPA, Hibernate e MySQL são esperadas, visto que o app Spring fica reinicializando até conseguir conectar no MySQL. Cada vez que falha, a aplicação reinicia. Certifique-se de aguardar até que o processo de inicialização esteja concluído.
 
 ## API Endpoints
 
